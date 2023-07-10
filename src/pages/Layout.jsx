@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
 
@@ -13,6 +13,16 @@ const setting = {
 const Layout = () => {
   return (
     <>
+      <nav>
+        <ul>
+          <li>
+            <Link to='/'>Index</Link>
+          </li>
+          <li>
+            <Link to='/deri'>Deri</Link>
+          </li>
+        </ul>
+      </nav>
       <Canvas
         orthographic
         gl={{

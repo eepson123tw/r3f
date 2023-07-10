@@ -10,3 +10,55 @@ body,
     overflow: hidden;
     background: lightgoldenrodyellow;
 }
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav{
+    z-index: 50;
+    position: fixed;
+    top:10%;
+    left: 50%;
+    transform: translate(-10%,-50%);
+    /* top:50px;
+    right: 50%; */
+    padding: 10px;
+}
+
+ul{ 
+    width: 100%;
+    display: flex;
+    font-size: 2vh;
+    border-radius: 20px;
+    background: white;
+    overflow: hidden;
+}
+li  a{
+    display: block;
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    transition: 0.3s all;
+    text-decoration: none;
+}
+li:hover a{
+    color: white;
+    background: black;
+}
+
+.label > div
+{
+    font-family: Helvetica, Arial;
+    position: absolute;
+    background: #00000088;
+    color: white;
+    padding: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 30px;
+    user-select: none;
+}
