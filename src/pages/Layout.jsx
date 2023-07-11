@@ -2,7 +2,9 @@
 import { Outlet, Link } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
-
+import { StrictMode } from 'react'
+import { Leva } from 'leva'
+import { Perf } from 'r3f-perf'
 const setting = {
   fov: 45,
   near: 0.1,
@@ -38,18 +40,22 @@ const Layout = () => {
           ))}
         </ul>
       </nav>
-      <Canvas
-        orthographic
-        gl={{
-          antialias: true,
-          toneMapping: THREE.ACESFilmicToneMapping,
-          outputColorSpace: THREE.SRGBColorSpace
-        }}
-        flat
-        camera={setting}
-      >
-        <Outlet />
-      </Canvas>
+      <StrictMode>
+        <Leva collapsed={true} />
+        <Canvas
+          orthographic
+          gl={{
+            antialias: true,
+            toneMapping: THREE.ACESFilmicToneMapping,
+            outputColorSpace: THREE.SRGBColorSpace
+          }}
+          flat
+          camera={setting}
+        >
+          <Perf position='top-left' />
+          <Outlet />
+        </Canvas>
+      </StrictMode>
     </>
   )
 }
