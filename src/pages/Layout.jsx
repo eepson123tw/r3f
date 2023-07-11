@@ -10,17 +10,32 @@ const setting = {
   position: [3, 2, 6],
   zoom: 100
 }
+
+const routers = [
+  {
+    path: '/',
+    routerName: 'Index'
+  },
+  {
+    path: '/deri',
+    routerName: 'Deri'
+  },
+  {
+    path: '/debug',
+    routerName: 'Debug'
+  }
+]
+
 const Layout = () => {
   return (
     <>
       <nav>
         <ul>
-          <li>
-            <Link to='/'>Index</Link>
-          </li>
-          <li>
-            <Link to='/deri'>Deri</Link>
-          </li>
+          {routers.map((router, index) => (
+            <li key={index}>
+              <Link to={router.path}>{router.routerName}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <Canvas
