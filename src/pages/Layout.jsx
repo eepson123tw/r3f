@@ -25,6 +25,10 @@ const routers = [
   {
     path: '/debug',
     routerName: 'Debug'
+  },
+  {
+    path: '/env',
+    routerName: 'Env'
   }
 ]
 
@@ -49,6 +53,7 @@ const Layout = () => {
       <StrictMode>
         <Leva collapsed={true} />
         <Canvas
+          shadows={false}
           orthographic
           gl={{
             antialias: true,
@@ -59,6 +64,7 @@ const Layout = () => {
           camera={setting}
         >
           {windowWidth >= 600 && <Perf position='top-left' />}
+          {/* <color args={['#fff']} attach='background' /> */}
           <Outlet />
         </Canvas>
       </StrictMode>
