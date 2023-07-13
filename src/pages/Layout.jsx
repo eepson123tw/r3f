@@ -2,7 +2,7 @@
 import { Outlet, Link } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
-import { StrictMode } from 'react'
+import { StrictMode, useLayoutEffect, useState } from 'react'
 import { Leva } from 'leva'
 import { Perf } from 'r3f-perf'
 const setting = {
@@ -29,6 +29,12 @@ const routers = [
 ]
 
 const Layout = () => {
+  const [windowWidth, setWindowWidth] = useState(0)
+
+  useLayoutEffect(() => {
+    setWindowWidth(window.innerWidth)
+  }, [])
+
   return (
     <>
       <nav>
@@ -52,7 +58,7 @@ const Layout = () => {
           flat
           camera={setting}
         >
-          <Perf position='top-left' />
+          {windowWidth >= 600 && <Perf position='top-left' />}
           <Outlet />
         </Canvas>
       </StrictMode>
