@@ -2,16 +2,9 @@
 import { Outlet, Link } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
-import { StrictMode, useLayoutEffect, useState } from 'react'
+import { StrictMode, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Leva } from 'leva'
 import { Perf } from 'r3f-perf'
-const setting = {
-  fov: 45,
-  near: 0.1,
-  far: 200,
-  position: [3, 2, 6],
-  zoom: 100
-}
 
 const routers = [
   {
@@ -29,12 +22,24 @@ const routers = [
   {
     path: '/env',
     routerName: 'Env'
+  },
+  {
+    path: '/envMap',
+    routerName: 'EnvMap'
   }
 ]
+const setting = {
+  fov: 45,
+  near: 0.1,
+  far: 200,
+  position: [3, 2, 6],
+  zoom: 100
+}
 
 const Layout = () => {
   const [windowWidth, setWindowWidth] = useState(0)
 
+  const canvasRef = useRef(false)
   useLayoutEffect(() => {
     setWindowWidth(window.innerWidth)
   }, [])
@@ -53,6 +58,7 @@ const Layout = () => {
       <StrictMode>
         <Leva collapsed={true} />
         <Canvas
+          ref={canvasRef}
           shadows={false}
           orthographic
           gl={{
