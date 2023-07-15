@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useRef, Suspense } from 'react'
+import React, { useRef, Suspense, useState } from 'react'
 import { useThree, extend } from '@react-three/fiber'
 import {
   Text,
@@ -10,11 +10,10 @@ import {
   Float,
   PresentationControls
 } from '@react-three/drei'
-export default function Portfolio() {
-  const cubeRef = useRef(false)
-  const { camera, gl } = useThree() // g
 
+export default function Portfolio() {
   const phone = useGLTF('phone.gltf')
+
   return (
     <>
       <color attach='background' args={['#241a1a']} />
@@ -60,13 +59,13 @@ export default function Portfolio() {
             </Html>
           </primitive>
           <Text
-            font='./bangers-v20-latin-regular.woff'
+            font='./silkscreen-v1-latin_latin-ext-regular.woff'
             fontSize={1}
-            position={[4, 0.75, 0.75]}
-            rotation-y={-0.75}
+            position={[6, 0.75, 0.75]}
+            rotation-y={-0.25}
             maxWidth={2}
           >
-            BRUNO SIMON
+            Allen Shih
           </Text>
         </Float>
       </PresentationControls>

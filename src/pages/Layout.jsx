@@ -5,7 +5,7 @@ import * as THREE from 'three'
 import { StrictMode, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Leva } from 'leva'
 import { Perf } from 'r3f-perf'
-
+import { useLocation } from 'react-router-dom'
 const routers = [
   {
     path: '/',
@@ -50,23 +50,33 @@ const setting = {
 
 const Layout = () => {
   const [windowWidth, setWindowWidth] = useState(0)
-
+  const [showNav, setShowNav] = useState(true)
   const canvasRef = useRef(false)
+  const location = useLocation()
   useLayoutEffect(() => {
     setWindowWidth(window.innerWidth)
   }, [])
+  useEffect(() => {
+    if (location.pathname === '/portfolio') {
+      setShowNav(false)
+    } else {
+      setShowNav(true)
+    }
+  }, [location.pathname])
 
   return (
     <>
-      <nav>
-        <ul>
-          {routers.map((router, index) => (
-            <li key={index}>
-              <Link to={router.path}>{router.routerName}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {showNav && (
+        <nav>
+          <ul>
+            {routers.map((router, index) => (
+              <li key={index}>
+                <Link to={router.path}>{router.routerName}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
       <StrictMode>
         <Leva collapsed={true} />
         <Canvas
