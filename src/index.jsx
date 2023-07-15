@@ -10,6 +10,7 @@ import Env from './component/Env'
 import EnvMap from './component/EnvMap'
 import Modal from './component/Modal'
 import ThreeDText from './component/ThreeDText'
+import Portfolio from './component/Portfolio'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -24,6 +25,7 @@ root.render(
         <Route path='envMap' element={<EnvMap />} />
         <Route path='Modal' element={<Modal />} />
         <Route path='threeDText' element={<ThreeDText />} />
+        <Route path='portfolio' element={<Portfolio />} />
       </Route>
     </Routes>
   </BrowserRouter>

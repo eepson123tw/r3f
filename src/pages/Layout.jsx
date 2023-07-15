@@ -34,6 +34,10 @@ const routers = [
   {
     path: '/threeDText',
     routerName: 'ThreeDText'
+  },
+  {
+    path: '/portfolio',
+    routerName: 'Portfolio'
   }
 ]
 const setting = {
