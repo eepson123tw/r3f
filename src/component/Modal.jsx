@@ -15,6 +15,7 @@ export default function Modal() {
 
   return (
     <>
+      <color attach='background' args={['black']} />
       <orbitControls args={[camera, gl.domElement]} />
       <directionalLight
         castShadow
