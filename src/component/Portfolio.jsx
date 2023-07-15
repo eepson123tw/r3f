@@ -55,7 +55,7 @@ export default function Portfolio() {
               position={[0.17, 1.33, 0.1]}
               // rotation-x={-0.256}
             >
-              <iframe src='https://bruno-simon.com/html/' />
+              <iframe src='https://portfolio.zeabur.app/' />
             </Html>
           </primitive>
           <Text
