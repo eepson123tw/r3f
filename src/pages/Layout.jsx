@@ -26,6 +26,10 @@ const routers = [
   {
     path: '/envMap',
     routerName: 'EnvMap'
+  },
+  {
+    path: '/modal',
+    routerName: 'Modal'
   }
 ]
 const setting = {
@@ -64,7 +68,7 @@ const Layout = () => {
           gl={{
             antialias: true,
             toneMapping: THREE.ACESFilmicToneMapping,
-            outputColorSpace: THREE.SRGBColorSpace
+            outputColorSpace: THREE.SRGBColorSpaces
           }}
           flat
           camera={setting}

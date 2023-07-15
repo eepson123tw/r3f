@@ -8,6 +8,7 @@ import Deri from './component/Deri'
 import Debug from './component/Debug'
 import Env from './component/Env'
 import EnvMap from './component/EnvMap'
+import Modal from './component/Modal'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -20,6 +21,7 @@ root.render(
         <Route path='debug' element={<Debug />} />
         <Route path='env' element={<Env />} />
         <Route path='envMap' element={<EnvMap />} />
+        <Route path='Modal' element={<Modal />} />
       </Route>
     </Routes>
   </BrowserRouter>

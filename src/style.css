@@ -23,18 +23,17 @@ nav{
     top:5%;
     left: 50%;
     transform: translate(-50%,5%);
-    min-width:300px;
+    min-width:3vw;
     width: 50%;
 }
 
 ul{ 
     width: 100%;
     display: flex;
-    font-size: 2vh;
-    background: white;
 }
 li{
     flex-grow: 1;
+    background: white;
 }
 li  a{
     display: block;
@@ -44,6 +43,7 @@ li  a{
     color: black;
     transition: 0.3s all;
     text-decoration: none;
+    font-size: 1.5vw;
 }
 li:hover a{
     color: white;
