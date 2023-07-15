@@ -30,6 +30,10 @@ const routers = [
   {
     path: '/modal',
     routerName: 'Modal'
+  },
+  {
+    path: '/threeDText',
+    routerName: 'ThreeDText'
   }
 ]
 const setting = {

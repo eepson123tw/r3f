@@ -9,6 +9,7 @@ import Debug from './component/Debug'
 import Env from './component/Env'
 import EnvMap from './component/EnvMap'
 import Modal from './component/Modal'
+import ThreeDText from './component/ThreeDText'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -22,6 +23,7 @@ root.render(
         <Route path='env' element={<Env />} />
         <Route path='envMap' element={<EnvMap />} />
         <Route path='Modal' element={<Modal />} />
+        <Route path='threeDText' element={<ThreeDText />} />
       </Route>
     </Routes>
   </BrowserRouter>
