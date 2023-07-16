@@ -50,7 +50,7 @@ export default function Portfolio() {
           blur={5}
         ></ContactShadows>
         <PresentationControls
-          global={false}
+          global={true}
           rotation={[0.13, 0.1, 0]}
           polar={[-0.8, 0.8]}
           azimuth={[-1, 0.75]}
