@@ -11,22 +11,25 @@ import EnvMap from './component/EnvMap'
 import Modal from './component/Modal'
 import ThreeDText from './component/ThreeDText'
 import Portfolio from './component/Portfolio'
+import { AppProvider } from './store/app'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
 root.render(
   <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Layout />}>
-        <Route index element={<Experience />} />
-        <Route path='deri' element={<Deri />} />
-        <Route path='debug' element={<Debug />} />
-        <Route path='env' element={<Env />} />
-        <Route path='envMap' element={<EnvMap />} />
-        <Route path='Modal' element={<Modal />} />
-        <Route path='threeDText' element={<ThreeDText />} />
-        <Route path='portfolio' element={<Portfolio />} />
-      </Route>
-    </Routes>
+    <AppProvider>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Experience />} />
+          <Route path='deri' element={<Deri />} />
+          <Route path='debug' element={<Debug />} />
+          <Route path='env' element={<Env />} />
+          <Route path='envMap' element={<EnvMap />} />
+          <Route path='Modal' element={<Modal />} />
+          <Route path='threeDText' element={<ThreeDText />} />
+          <Route path='portfolio' element={<Portfolio />} />
+        </Route>
+      </Routes>
+    </AppProvider>
   </BrowserRouter>
 )
