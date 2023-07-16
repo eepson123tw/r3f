@@ -32,7 +32,7 @@ export default function Portfolio() {
         fallback={
           <Text
             font='./silkscreen-v1-latin_latin-ext-regular.woff'
-            fontSize={1}
+            fontSize={windowWidth >= 600 ? 1 : 0.5}
             position={[0, 0, 0]}
             rotation-y={0.45}
             maxWidth={2}
