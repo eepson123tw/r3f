@@ -20,6 +20,7 @@
     "react": "18.2",
     "react-dom": "18.2",
     "react-router-dom": "^6.14.1",
-    "three": "0.153"
+    "three": "0.153",
+    "vite-plugin-glsl": "^1.1.2"
   }
 }

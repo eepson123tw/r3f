@@ -38,6 +38,10 @@ const routers = [
     routerName: 'ThreeDText'
   },
   {
+    path: '/portal',
+    routerName: 'Portal'
+  },
+  {
     path: '/portfolio',
     routerName: 'Portfolio'
   }
