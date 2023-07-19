@@ -8,7 +8,8 @@ import {
   useGLTF,
   Environment,
   Float,
-  PresentationControls
+  PresentationControls,
+  useProgress
 } from '@react-three/drei'
 import { useApp } from '../store/app'
 
@@ -23,10 +24,11 @@ export default function Portfolio() {
       setPositionY(-3)
     }
   }, [windowWidth])
+  const { progress } = useProgress()
 
   return (
     <>
-      <color attach='background' args={['#241a1a']} />
+      <color attach='background' args={['#999']} />
 
       <Suspense
         fallback={
@@ -37,11 +39,11 @@ export default function Portfolio() {
             rotation-y={0.45}
             maxWidth={2}
           >
-            Loading...
+            Loading {progress.toFixed(2)} %...
           </Text>
         }
       >
-        <Environment preset='city' />
+        <Environment preset='studio' intensity={0.5} />
         <ContactShadows
           color='#241a1a'
           position-y={-4}
@@ -76,7 +78,7 @@ export default function Portfolio() {
                 transform
                 wrapperClass='htmlScreen'
                 distanceFactor={1.17}
-                position={[0.17, 1.33, 0.1]}
+                position={[0.14, 1.31, 0.01]}
               >
                 <iframe src='https://portfolio.zeabur.app/' />
               </Html>
