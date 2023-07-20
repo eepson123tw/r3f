@@ -67,7 +67,7 @@ li:hover a{
     border-radius: 30px;
     user-select: none;
 }
-.htmlScreen iframe
+.htmlScreen .frame img
 {
     width: 515px;
     height: 1100px;

@@ -73,6 +73,9 @@ export default function Portfolio() {
               scale={scale}
               position-y={positionY}
               rotation-x={-0.256}
+              onClick={() => {
+                window.open('https://portfolio.zeabur.app/')
+              }}
             >
               <Html
                 transform
@@ -80,7 +83,14 @@ export default function Portfolio() {
                 distanceFactor={1.17}
                 position={[0.14, 1.31, 0.01]}
               >
-                <iframe src='https://portfolio.zeabur.app/' />
+                <div
+                  className='frame'
+                  onClick={() => {
+                    window.open('https://portfolio.zeabur.app/')
+                  }}
+                >
+                  <img src='./portfolio.png' alt='' />
+                </div>
               </Html>
             </primitive>
             <Text
