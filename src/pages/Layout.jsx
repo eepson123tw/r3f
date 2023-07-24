@@ -44,14 +44,18 @@ const routers = [
   {
     path: '/portfolio',
     routerName: 'Portfolio'
+  },
+  {
+    path: '/postProcessing',
+    routerName: 'PostProcessing'
   }
 ]
 const setting = {
   fov: 45,
   near: 0.1,
   far: 200,
-  position: [3, 2, 6],
-  zoom: 100
+  position: [4, 2, 6]
+  // zoom: 100
 }
 
 const Layout = () => {
@@ -95,14 +99,14 @@ const Layout = () => {
         <Leva collapsed={true} />
         <Canvas
           ref={canvasRef}
-          shadows={false}
-          orthographic
-          gl={{
-            antialias: true,
-            toneMapping: THREE.ACESFilmicToneMapping,
-            outputColorSpace: THREE.SRGBColorSpaces
-          }}
-          flat
+          // orthographic
+          // shadows={true}
+          // gl={{
+          //   antialias: true,
+          //   toneMapping: THREE.ACESFilmicToneMapping,
+          //   outputColorSpace: THREE.SRGBColorSpaces
+          // }}
+          // flat
           camera={setting}
         >
           {windowWidth >= 600 && <Perf position='top-left' />}

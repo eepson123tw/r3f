@@ -8,6 +8,7 @@
     "build": "vite build"
   },
   "devDependencies": {
+    "@react-three/postprocessing": "2.14",
     "@vitejs/plugin-react": "4.0",
     "vite": "^4.3.9"
   },
@@ -16,6 +17,7 @@
     "@react-three/fiber": "8.13",
     "leva": "0.9",
     "maath": "^0.7.0",
+    "postprocessing": "6.31",
     "r3f-perf": "7.1",
     "react": "18.2",
     "react-dom": "18.2",

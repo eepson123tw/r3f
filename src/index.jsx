@@ -12,6 +12,7 @@ import Modal from './component/Modal'
 import ThreeDText from './component/ThreeDText'
 import Portfolio from './component/Portfolio'
 import Portal from './component/Portal'
+import PostProcessing from './component/PostProcessing'
 import { AppProvider } from './store/app'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
@@ -30,6 +31,7 @@ root.render(
           <Route path='threeDText' element={<ThreeDText />} />
           <Route path='portfolio' element={<Portfolio />} />
           <Route path='Portal' element={<Portal />} />
+          <Route path='PostProcessing' element={<PostProcessing />} />
         </Route>
       </Routes>
     </AppProvider>
